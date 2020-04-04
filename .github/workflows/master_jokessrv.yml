@@ -30,4 +30,4 @@ jobs:
         app-name: 'jokessrv'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_88fc2295243e4ec48ab8d27aca49ede0 }}
-        package: '${{ github.workspace }}/target/*.jar'
+        package: '${{ github.workspace }}/target/scala*/*.jar'
