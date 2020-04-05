@@ -27,7 +27,7 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'jokessrv'
+        app-name: 'jokessrv1'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_88fc2295243e4ec48ab8d27aca49ede0 }}
         package: '${{ github.workspace }}/target/scala*/*.jar'
