@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - jokessrv
+name: Build and deploy JAR app to Azure Web App - jokessrv1
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'jokessrv'
+        app-name: 'jokessrv1'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_88fc2295243e4ec48ab8d27aca49ede0 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_66e6ea8fb5c94bae8f4c107af9d43dcf }}
         package: '${{ github.workspace }}/target/scala*/*.jar'
