@@ -30,4 +30,18 @@ object JokessrvRoutes {
         } yield resp
     }
   }
+
+  def healthRoutes[F[_]: Sync]():HttpRoutes[F] = {
+
+    val dsl = new Http4sDsl[F]{}
+
+    import dsl._
+    HttpRoutes.of[F] {
+      case GET -> Root  =>
+        for {
+          resp <- Ok()
+        } yield resp
+    }
+
+  }
 }

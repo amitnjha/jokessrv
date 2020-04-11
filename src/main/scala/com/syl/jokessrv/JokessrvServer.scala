@@ -30,7 +30,7 @@ object JokessrvServer {
       finalHttpApp = Logger.httpApp(true, true)(httpApp)
 
       exitCode <- BlazeServerBuilder[F]
-        .bindHttp(8080, "0.0.0.0")
+        .bindHttp(80, "0.0.0.0")
         .withHttpApp(finalHttpApp)
         .serve
     } yield exitCode
